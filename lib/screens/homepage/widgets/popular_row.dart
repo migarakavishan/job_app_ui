@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_app_ui/screens/job_view/job_view.dart';
 import 'package:job_app_ui/services/get_data.dart';
 
 class PopularRow extends StatelessWidget {
@@ -18,10 +19,20 @@ class PopularRow extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
           children: List.generate(data.getJobData().length, (index) {
-        return JobCard(
-          size: size,
-          data: data,
-          index: index,
+        return GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      JobViewPage(model: data.getJobData()[index]),
+                ));
+          },
+          child: JobCard(
+            size: size,
+            data: data,
+            index: index,
+          ),
         );
       })),
     );
