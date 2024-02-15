@@ -27,7 +27,11 @@ class CustomAppBar extends StatelessWidget {
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-              color: Colors.grey, borderRadius: BorderRadius.circular(15)),
+              image: const DecorationImage(
+                  image: NetworkImage(
+                      "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg")),
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(15)),
         )
       ],
     );

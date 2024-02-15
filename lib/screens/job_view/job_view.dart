@@ -95,7 +95,8 @@ class _JobViewPageState extends State<JobViewPage> {
                         Row(
                           children: [
                             CircleAvatar(
-                              backgroundImage: NetworkImage(widget.model.logo),
+                              backgroundImage:
+                                  NetworkImage(widget.model.logo),
                               radius: 20,
                             ),
                             const SizedBox(
